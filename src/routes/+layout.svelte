@@ -2,8 +2,10 @@
   import '../app.css'
   import { page } from '$app/stores';
   const { children } = $props()
+  $inspect($page.url.hostname)
 </script>
-{#if $page.url.hostname == 'localhost'}
+
+{#if $page.url.hostname == 'soulfoodforestfarms'}
 <div style="display:flex;justify-content:center;align-items:center;width:100vw;width:100svw;height:100vh;height:100svh;background-color:#184B46">
   <div style="text-align:center">
     <p style="color:#FFF;font-family:Kolonia;font-size:2rem;margin-bottom:.5rem;">HanaMi</p>
