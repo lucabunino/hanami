@@ -5,9 +5,7 @@
   $inspect($page.url.hostname)
 </script>
 
-<p>{$page.url.hostname}</p>
-
-{#if $page.url.hostname == 'soulfoodforestfarms.it'}
+{#if $page.url.hostname == 'hanami.soulfoodforestfarms.it'}
 <div style="display:flex;justify-content:center;align-items:center;width:100vw;width:100svw;height:100vh;height:100svh;background-color:#184B46">
   <div style="text-align:center">
     <p style="color:#FFF;font-family:Kolonia;font-size:2rem;margin-bottom:.5rem;">HanaMi</p>
