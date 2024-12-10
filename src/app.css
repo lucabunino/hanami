@@ -1,13 +1,15 @@
 /* Font import */
 @font-face {
   font-family: Kolonia;
-  src:  url('/fonts/Kolonia-Regular.otf') format('opentype');
+  src:  url('/fonts/Kolonia-Regular.woff2') format('woff2');
+  src:  url('/fonts/Kolonia-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Kolonia;
-  src:  url('/fonts/Kolonia-Italic.otf') format('opentype');
+  src:  url('/fonts/Kolonia-Italic.woff2') format('woff2');
+  src:  url('/fonts/Kolonia-Italic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
 }
@@ -51,7 +53,7 @@ html {
   -webkit-font-smoothing: antialiased;
   color: var(--white);
   background-color: var(--forest);
-  font-size: clamp(18px, 18px, 18px);
+  font-size: clamp(14px, calc(10.5px + .5vw), 22px);
   line-height: 1.2;
   letter-spacing: .01em;
   scroll-behavior: smooth;
@@ -89,6 +91,32 @@ a {
   width: auto;
   position: relative;
 }
+a.active-white {
+  color: var(--white);
+}
+a.active-forest {
+  color: var(--forest);
+}
+a.active-green {
+  color: var(--green);
+}
+a.hover-white:hover {
+  color: var(--white);
+}
+a.hover-forest:hover {
+  color: var(--forest);
+}
+a.hover-green:hover,
+a:any-link.hover-green.white:hover,
+a:-webkit-any-link.hover-green.white:hover {
+  color: var(--green);
+}
+a:-webkit-any-link.underline {
+  text-decoration: underline;
+}
+a:any-link.underline {
+  text-decoration: underline;
+}
 .text-l {
   font-family: Kolonia, 'Times New Roman', Times, serif;
   font-size: 5.5555rem;
@@ -97,6 +125,55 @@ a {
 .text-m {
   font-family: Kolonia, 'Times New Roman', Times, serif;
   font-size: 2rem;
+}
+.bg-forest {
+  background-color: var(--forest);
+}
+.bg-green {
+  background-color: var(--green);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.forest {
+  color: var(--forest);
+}
+.green {
+  color: var(--green);
+}
+a:any-link.white,
+a:-webkit-any-link.white,
+.white {
+  color: var(--white);
+}
+.mt-1{
+  margin-top: 1.2rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li:not(.menu-item)::before {
+  content: '+ ';
+}
+ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+ol li {
+  counter-increment: item;
+  margin-bottom: 1.5rem;
+  padding-left: 6rem;
+}
+ol li:before {
+  content: counter(item);
+  font-family: Kolonia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  width: 3rem;
+  left: 1rem;
+  position: absolute;
+  text-align: left;
 }
 @media screen and (max-width: 900px) {
   :root{
