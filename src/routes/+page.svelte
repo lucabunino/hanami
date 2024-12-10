@@ -104,7 +104,7 @@ import { modules } from "$lib/modules";
       </div>
     {/each}
     <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Programma completo</a>
-    <div id="modules-all">
+    <div id="programma-completo">
       <div class="grid big">
         <p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
       </div>
@@ -377,10 +377,10 @@ h4:not(:first-child) {
 .module-side ul {
   flex-basis: 75%;
 }
-#modules-all {
+#programma-completo {
   padding: 0 var(--margin);
 }
-#modules-all a {
+#programma-completo a {
   margin: 0 0 3rem;
 }
 
