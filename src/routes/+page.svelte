@@ -103,8 +103,8 @@ import { modules } from "$lib/modules";
         </div>
       </div>
     {/each}
-    <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Programma completo</a>
-    <div id="programma-completo">
+    <a href="/#programma-completo" class="module-navigator bg-white forest">Programma completo</a>
+    <div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
       <div class="grid big">
         <p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
       </div>
@@ -340,7 +340,6 @@ h4:not(:first-child) {
 /* Moduli */
 .module>div {
   padding: 0 var(--margin) calc(var(--margin)*3);
-  counter-increment: module;
 }
 .module::before {
   content: '';
@@ -379,6 +378,9 @@ h4:not(:first-child) {
 }
 #programma-completo {
   padding: 0 var(--margin);
+}
+#programma-completo .grid {
+  padding: var(--gutter) var(--margin) calc(var(--margin)*1.5);
 }
 #programma-completo a {
   margin: 0 0 3rem;
