@@ -1,11 +1,47 @@
 <script>
 import { modules } from "$lib/modules";
+import { onMount } from 'svelte';
+let innerHeight = $state()
+
+// Import stores
+import { getSection } from '$lib/stores/section.svelte.js';
+const sectioner = getSection();
+
+export function reachedTop(element) {
+  const computedStyle = window.getComputedStyle(element);
+  let topValue = parseFloat(computedStyle.top);
+  
+  function checkPosition() {
+    const rect = element.getBoundingClientRect();
+    if (rect.top <= topValue) {
+      sectioner.setSection(element.dataset.section)
+    }
+  }
+
+  // Recalculate on scroll and resize
+  const onScrollOrResize = () => checkPosition();
+  window.addEventListener('scroll', onScrollOrResize);
+  window.addEventListener('resize', onScrollOrResize);
+}
+
+onMount(() => {
+  return {
+    destroy() {
+      observer.unobserve(element);
+      window.removeEventListener('scroll', onScrollOrResize);
+      window.removeEventListener('resize', onScrollOrResize);
+    },
+  };
+})
+
 </script>
 
-<section id="hero" class="bg-forest">
-  <h1 class="text-l">HanaMi<br>Fare, conoscere e abitare la transizione ecologica</h1>
+<svelte:window bind:innerHeight></svelte:window>
+
+<section id="hero" class="bg-forest" data-section="hero" use:reachedTop>
+  <h1 class="text-l">HanaMi<br>Fare, conoscere e abitare <br class="desktop-only">la transizione ecologica</h1>
 </section>
-<a href="/#about" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 0)">About</a>
+<a use:reachedTop data-section="about" href="/#about" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 0)">About</a>
 <section id="about">
   <div class="bg-green forest">
     <h3 class="text-m">HanaMi è cambiamento, trasformazione situata e coevolutiva. Si radica al margine periurbano, nel primo sistema agroforestale rigenerativo di Milano e qui vuole crescere, assieme ai giovani della città. Campo di apprendimento e sperimentazione, HanaMi è una non-scuola a cielo aperto dove fare, conoscere e abitare la transizione ecologica. Attraverso dispositivi teorici e strumenti realizzativi che permetteranno di conoscere il territorio e di custodirlo, HanaMi si fa rete antifragile di relazioni vicine e lontane.</h3>
@@ -32,7 +68,6 @@ import { modules } from "$lib/modules";
           <li><a class="underline hover-white" href="https://www.polimi.it/sviluppo-sostenibile/innovazione-e-responsabilita-sociale/innovazione-di-prossimita/off-campus/cascina-nosedo" target="_blank" rel="noopener noreferrer">Polisocial Offcampus, Cascina Nosedo</a></li>
           <p>Via San Dionigi 80, Milano</p>
           <li><a class="underline hover-white" href="https://www.unimi.it/" target="_blank" rel="noopener noreferrer">Università degli Studi di Milano</a></li>
-          <p>Via Noto 8, Milano</p>
         </ul>
       </div>
       <div class="grid-item">
@@ -42,11 +77,11 @@ import { modules } from "$lib/modules";
     </div>
   </div>
 </section>
-<a href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1)">Living lab</a>
+<a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1)">Living lab</a>
 <section id="living-lab">
   <div class="bg-forest green">
     <h3 class="text-m">Il programma di HanaMi è suddiviso in due trimestri, da aprile a giugno e da settembre a novembre, con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo. L’obiettivo è quello di approfondire temi cruciali relativi alla transizione ecologica attraverso una modalità di apprendimento basata sul fare, conoscere e abitare il campo agricolo in modo collaborativo e co-creativo.</h3>
-    <div class="grid">
+    <div class="grid single">
       <div class="grid-item">
         <ul>
           <li>96 ore di lezioni con docenti di Unimi e Polimi</li>
@@ -103,7 +138,7 @@ import { modules } from "$lib/modules";
         </div>
       </div>
     {/each}
-    <a href="/#programma-completo" class="module-navigator bg-white forest">Programma completo</a>
+    <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Programma completo</a>
     <div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
       <div class="grid big">
         <p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
@@ -113,13 +148,13 @@ import { modules } from "$lib/modules";
   </div>
   
 </section>
-<a href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2)">Iscrizioni</a>
+<a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2)">Iscrizioni</a>
 <section id="iscrizioni">
   <div class="bg-green forest">
     <h3 class="text-m">Le iscrizioni al Living Lab di HanaMi sono aperte a giovani interessati ai temi della transizione ecologica. Grazie al contributo di Fondazione di Comunità, per questo primo anno di avvio abbiamo potuto mantenere il costo di iscrizione ad HanaMi quanto più accessibile possibile. Il numero ideale di partecipanti è di 25 persone, per questo ci riserviamo di valutare le candidature in modo da poter esprimere al meglio il potenziale di apprendimento.</h3>
     <div class="grid big">
       <div class="grid-item">
-        <h3 class="text-m">Procedura di iscrizione</h3>
+        <h3 class="text-m mobile-title">Procedura di iscrizione</h3>
         <ol>
           <li>Avvia la procedura accedendo al form di iscrizione che trovi al link sottostante.</li>
           <li>HanaMi offre diverse modalità di iscrizione. Potrai scegliere se iscriverti al corso completo, ad un singolo modulo o ad una singola giornata.</li>
@@ -130,7 +165,7 @@ import { modules } from "$lib/modules";
     </div>
     <div class="grid big">
       <div class="grid-item">
-        <h3 class="text-m">Documenti per l’iscrizione</h3>
+        <h3 class="text-m mobile-title">Documenti per l’iscrizione</h3>
         <ul>
           <li>Curriculum vitae (preferibilmente in formato Europass)</li>
           <li>Lettera motivazionale (massimo 500 parole)</li>
@@ -140,58 +175,31 @@ import { modules } from "$lib/modules";
         <p class="mt-1">Compila il form sottostante per inviare la tua candidatura e avviare la procedura di iscrizione al corso.</p>
       </div>
       <div class="grid-item">
-        <h3 class="text-m">Scadenze</h3>
+        <h3 class="text-m mobile-title">Scadenze</h3>
         <p class="deadline">31 Gennaio 2025</p>
         <p>Deadline per invio della candidatura</p>
       </div>
     </div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="btn">Vai al form</a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
   </div>
 </section>
-<a href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3)">Info & contatti</a>
+<a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3)">Info & contatti</a>
 <section id="info-e-contatti">
   <div class="bg-forest">
     <p>HanaMi è un progetto nato da Soulfood Forestfarms Hub Italia, organizzazione no-profit che è formata da un’Impresa Sociale e una Associazione di promozione sociale.</p>
     <p class="mt-1">Per informazioni sui corsi, lo staff di HanaMi è a vostra disposizione. Contattaci!</p>
     <div class="grid small">
       <div class="grid-item">
-        <p><a class="hover-green" href="mailto:hanami@soulfoodforestfarms.it">hanami@soulfoodforestfarms.it</a></p>
-        <p><a class="hover-green" href="https://www.instagram.com/hanamiscuola/" target="_blank" rel="noopener noreferrer">@hanami_soulfood</a></p>
-        <p>T <a class="hover-green" href="tel:+393478898281">+39 347 8898281</a></p>
+        <p><a class="underline hover-green" href="mailto:hanami@soulfoodforestfarms.it">hanami@soulfoodforestfarms.it</a></p>
+        <p><a class="underline hover-green" href="https://www.instagram.com/hanamiscuola/" target="_blank" rel="noopener noreferrer">@hanami_soulfood</a></p>
+        <p>T <a class="underline hover-green" href="tel:+393478898281">+39 347 8898281</a></p>
       </div>
       <div class="grid-item">
-        <p>© <a class="hover-green" href="https://soulfoodforestfarms.it/" target="_blank" rel="noopener noreferrer">Soulfood Forestfarms Hub Italia</a></p>
+        <p>© <a class="underline hover-green" href="https://soulfoodforestfarms.it/" target="_blank" rel="noopener noreferrer">Soulfood Forestfarms Hub Italia</a></p>
         <p>Impresa Sociale S.r.l.</p>
-        <p><a class="hover-green" href="https://maps.app.goo.gl/z5MQjd13DbRYh9zw8" target="_blank" rel="noopener noreferrer">via Druso 9, 20133 Milano</a></p>
+        <p><a class="underline hover-green" href="https://maps.app.goo.gl/z5MQjd13DbRYh9zw8" target="_blank" rel="noopener noreferrer">via Druso 9, 20133 Milano</a></p>
       </div>
     </div>
-    <!-- <div class="grid small">
-      <div class="grid-item">
-        <h4>Istituzioni</h4>
-        <ul>
-          <li><a href="https://www.polimi.it/" target="_blank" rel="noopener noreferrer">Politecnico di Milano</a></li>
-          <li><a href="https://www.unimi.it/" target="_blank" rel="noopener noreferrer">Università degli Studi di Milano</a></li>
-        </ul>
-      </div>
-      <div class="grid-item">
-        <h4>Professionisti</h4>
-        <ul>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Riccardo Gini</a></li>
-          <li><a href="https://terzopaesaggio.org/" target="_blank" rel="noopener noreferrer">Terzo Paesaggio</a></li>
-          <li><a href="https://www.biologicorigenerativo.it/" target="_blank" rel="noopener noreferrer">Iside Farm</a></li>
-          <li><a href="https://faunaviva.wordpress.com/" target="_blank" rel="noopener noreferrer">Fauna viva</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Del Toro</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Vairo</a></li>
-        </ul>
-      </div>
-      <div class="grid-item">
-        <h4>Organizzazioni</h4>
-        <ul>
-          <li><a href="https://soulfoodforestfarms.it/" target="_blank" rel="noopener noreferrer">Soulfood Forstfarms</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Altro</a></li>
-        </ul>
-      </div>
-    </div> -->
     <div class="partners">
       <div class="partner-row">
         <h4 class="partner-title">HanaMi é un progetto di</h4>
@@ -204,6 +212,9 @@ import { modules } from "$lib/modules";
         <a href="https://www.fondazionedeagostini.it/" target="_blank" rel="noopener noreferrer"><img class="partner" src="/logo/fondazione_de_agostini.png" alt=""></a>
         <a href="https://www.fondazioneclaudiodealbertis.it/" target="_blank" rel="noopener noreferrer"><img class="partner" src="/logo/fondazione_claudio_de_albertis.png" alt=""></a>
       </div>
+      <div class="partner-row">
+        <p>HanaMi è realizzato nell’ambito del programma <a class="underline hover-green" href="https://www.fondazionecomunitamilano.org/progetti/lacittadeigiovani-milano/" target="_blank" rel="noopener noreferrer">La città dei giovani</a></p>
+      </div>
     </div>
   </div>
 </section>
@@ -211,17 +222,20 @@ import { modules } from "$lib/modules";
 <style>
 /* Common classes */
 section>div:not(#modules) {
-  padding: var(--margin) var(--margin) calc(var(--margin)*3);
+  padding: 1rem 1rem calc(1rem*3);
   margin-top: -1px;
 }
 .section-navigator {
   width: 100%;
-  padding: var(--gutter) var(--margin);
+  padding: .5rem 1rem;
   position: sticky;
   z-index: 2;
   text-transform: uppercase;
   font-size: 1.05em;
   color: var(--white);
+  height: var(--barHeight);
+  display: flex;
+  align-items: center;
 }
 h3 {
   max-width: calc(1000px + 12vw);
@@ -237,7 +251,11 @@ h4:not(:first-child) {
   padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  gap: var(--gutter);
+  gap: .5rem;
+  row-gap: 1.2rem;
+}
+.grid.big {
+  row-gap: 3rem;
 }
 
 .grid .grid-item:nth-child(1) {
@@ -249,6 +267,10 @@ h4:not(:first-child) {
 .grid .grid-item:nth-child(3) {
   grid-column: 11 / span 4;
 }
+
+.grid.single .grid-item {
+    grid-column: 1 / span 6;
+  }
 
 .grid.small .grid-item:nth-child(1) {
   grid-column: 1 / span 4;
@@ -280,7 +302,7 @@ h4:not(:first-child) {
   color: var(--forest);
 }
 .btn.download {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-transform: none;
 }
 .btn.download:hover {
@@ -290,6 +312,94 @@ h4:not(:first-child) {
 .grid + .btn {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .grid .grid-item:nth-child(1) {
+    grid-column: 1 / span 5;
+  }
+  .grid .grid-item:nth-child(2) {
+    grid-column: 6 / span 5;
+  }
+  .grid .grid-item:nth-child(3) {
+    grid-column: 11 / span 5;
+  }
+
+  .grid.single .grid-item {
+    grid-column: 1 / span 7;
+  }
+
+  .grid.small .grid-item:nth-child(1) {
+    grid-column: 1 / span 4;
+  }
+  .grid.small .grid-item:nth-child(2) {
+    grid-column: 5 / span 4;
+  }
+  .grid.small .grid-item:nth-child(3) {
+    grid-column: 9 / span 4;
+  }
+  .grid.small .grid-item:nth-child(4) {
+    grid-column: 13 / span 4;
+  }
+
+  .grid.big .grid-item:nth-child(1) {
+    grid-column: 1 / span 7;
+  }
+  .grid.big .grid-item:nth-child(2) {
+    grid-column: 9 / span 7;
+  }
+}
+@media screen and (max-width: 900px) {
+  .btn.form {
+    width: 100%;
+    text-align: center;
+  }
+  .grid .grid-item:nth-child(1) {
+    grid-column: 1 / span 16;
+  }
+  .grid .grid-item:nth-child(2) {
+    grid-column: 1 / span 16;
+  }
+  .grid .grid-item:nth-child(3) {
+    grid-column: 1 / span 16;
+  }
+
+  .grid.single .grid-item {
+    grid-column: 1 / span 16;
+  }
+
+  .grid.small .grid-item:nth-child(1) {
+    grid-column: 1 / span 7;
+  }
+  .grid.small .grid-item:nth-child(2) {
+    grid-column: 9 / span 7;
+  }
+  .grid.small .grid-item:nth-child(3) {
+    grid-column: 1 / span 7;
+  }
+  .grid.small .grid-item:nth-child(4) {
+    grid-column: 9 / span 7;
+  }
+
+  .grid.big .grid-item:nth-child(1) {
+    grid-column: 1 / span 16;
+  }
+  .grid.big .grid-item:nth-child(2) {
+    grid-column: 1 / span 16;
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid.small .grid-item:nth-child(1) {
+    grid-column: 1 / span 16;
+  }
+  .grid.small .grid-item:nth-child(2) {
+    grid-column: 1 / span 16;
+  }
+  .grid.small .grid-item:nth-child(3) {
+    grid-column: 1 / span 16;
+  }
+  .grid.small .grid-item:nth-child(4) {
+    grid-column: 1 / span 16;
+  }
 }
 
 /* Hero */
@@ -313,11 +423,6 @@ h4:not(:first-child) {
   width: 80%;
   margin-bottom: .5em;
 }
-@media screen and (max-width: 900px) {
-  .temporary-container {
-    background-image:url(/img/bg-mobile.webp);
-  }
-}
 
 /* About */
 #about::before {
@@ -339,7 +444,7 @@ h4:not(:first-child) {
 
 /* Moduli */
 .module>div {
-  padding: 0 var(--margin) calc(var(--margin)*3);
+  padding: 0 1rem calc(1rem*3);
 }
 .module::before {
   content: '';
@@ -350,13 +455,16 @@ h4:not(:first-child) {
 }
 .module-navigator {
   width: 100%;
-  padding: var(--gutter) var(--margin);
+  padding: .5rem 1rem;
   position: sticky;
   z-index: 1;
   text-transform: uppercase;
   font-size: 1.05em;
   color: var(--forest);
   border-top: solid 1px var(--forest);
+  height: var(--barHeight);
+  display: flex;
+  align-items: center;
 }
 .module-title {
   padding: .5rem 0;
@@ -369,6 +477,7 @@ h4:not(:first-child) {
 }
 .module-side {
   display: flex;
+  margin-bottom: .6rem;
 }
 .module-side h4 {
   flex-basis: 25%;
@@ -377,13 +486,32 @@ h4:not(:first-child) {
   flex-basis: 75%;
 }
 #programma-completo {
-  padding: 0 var(--margin);
+  padding: 0 1rem;
 }
 #programma-completo .grid {
-  padding: var(--gutter) var(--margin) calc(var(--margin)*1.5);
+  padding: 0 0 1rem;
 }
 #programma-completo a {
   margin: 0 0 3rem;
+}
+@media screen and (max-width: 900px) {
+  .module-title,
+  .mobile-title {
+    font-size: 1.625rem;
+    margin-bottom: 1.4rem;
+  }
+  .module-side:first-of-type {
+    margin-top: 3rem;
+  }
+  .module-side:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .module-side h4 {
+    flex-basis: 20%;
+  }
+  .module-side ul {
+    flex-basis: 80%;
+  }
 }
 
 /* Iscrizioni */
@@ -420,7 +548,7 @@ h4:not(:first-child) {
   max-width: 600px;
 }
 .partners {
-  margin-top: calc(var(--margin)*4);
+  margin-top: calc(1rem*4);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -436,5 +564,10 @@ h4:not(:first-child) {
 }
 .partner {
   height: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .partner {
+    height: 2.5rem;
+  }
 }
 </style>

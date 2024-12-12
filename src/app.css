@@ -37,8 +37,6 @@
   margin: 0;
 }
 :root{
-  --gutter: .5rem;
-  --margin: 1rem;
   --transition: cubic-bezier(.77,0,.175,1) 500ms;
   --green: #00D082;
   --white: #FFFFFF;
@@ -53,7 +51,7 @@ html {
   -webkit-font-smoothing: antialiased;
   color: var(--white);
   background-color: var(--forest);
-  font-size: clamp(14px, calc(10.5px + .5vw), 22px);
+  font-size: clamp(16px, calc(10.5px + .5vw), 20px);
   line-height: 1.2;
   letter-spacing: .01em;
   scroll-behavior: smooth;
@@ -164,7 +162,7 @@ ol {
 ol li {
   counter-increment: item;
   margin-bottom: 1.5rem;
-  padding-left: 6rem;
+  padding-left: 3rem;
 }
 ol li:before {
   content: counter(item);
@@ -176,7 +174,27 @@ ol li:before {
   text-align: left;
 }
 @media screen and (max-width: 900px) {
-  :root{
-    --gutter: 1.5rem;
+  :root {
+    --barHeight: calc(1rem*1.2 + 1.5rem);
+  }
+  .text-l {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  .text-m {
+    font-size: 1.125rem;
+  }
+}
+
+/* Visibility */
+.hidden, .mobile-only {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .mobile-only {
+    display: inherit;
+  }
+  .desktop-only {
+    display: none;
   }
 }

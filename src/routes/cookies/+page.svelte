@@ -54,7 +54,7 @@
 <style>
 section {
   margin-top: var(--headerHeight);
-  padding: 3rem var(--margin) 10rem;
+  padding: 3rem 1rem 10rem;
 }
 section * {
   max-width: 680px;
@@ -70,5 +70,11 @@ p + p {
 }
 ul {
   margin: 1.2rem 0;
+}
+@media screen and (max-width: 900px) {
+  .text-m {
+    font-size: 1.625rem;
+    margin-bottom: 1.4rem;
+  }
 }
 </style>

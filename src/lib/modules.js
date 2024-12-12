@@ -13,8 +13,10 @@ export const modules = [
       "Parchi Agricoli di Milano, Riccardo Gini, direttore Parco Nord Milano",
       "Suolo e Biodiversità in Agricoltura Rigenerativa, Matteo Mazzola, Iside Farm",
       "Ecologia e Biodiversità, Alessandra Costanzo, docente UniMi",
+      "Biogeografia, Roberta Pennati",
+      "Geopedologia, Luca Trombino, docente UniMi",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Habitat",
@@ -25,14 +27,14 @@ export const modules = [
       "Workshop su allevamento galline free-range",
     ],
     corsi: [
-      "Clima e Geografia Fisica, Guglielmina Diolaiuti, docente UniMi",
-      "Geomorfologia, Antonella Senese, docente UniMi",
+      "Geografia Fisica, Guglielmina Diolaiuti, docente UniMi",
+      "Climatologia, Antonella Senese, docente UniMi",
       "Botanica, Ecologia del Paesaggio, Ilda Vagge, docente UniMi",
-      "Geopedologia, Luca Trombino, docente UniMi",
       "Clima, open data e open source tool per comprendere il clima locale, Valentina Dessì, docente PoliMi",
       "Analisi dei servizi ecosistemici, strumenti open source di supporto, Stefano Salata e Giulia Dataola, docenti PoliMi",
+      "Foreste e servizi forestali, Giorgio Vacchiano, UniMi",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Agroecologia e valori estetico funzionali",
@@ -45,11 +47,11 @@ export const modules = [
     ],
     corsi: [
       "Agroecologia, Stefano Bocchi, Pietro De Marinis, docenti UniMi",
-      "Analisi del ciclo di vita filiera agroforestale, Ilda Vagge, docente UniMi",
-      "Servizi ecosistemici culturali:strumenti e metodi per la rilevazione, Alice Giulia Dal Borgo, docente UniMi",
+      "Agroforestazione rigenerativa in risaia, Ilda Vagge, docente UniMi",
+      "Agroforestazione e servizi ecosistemici culturali: strumenti e metodi per la rilevazione, Alice Giulia Dal Borgo, docente UniMi",
       "Architettura del Paesaggio, Cristiano Del Toro, architetto paesaggista",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Coesione socio-territoriale e benessere psico-fisico",
@@ -57,22 +59,22 @@ export const modules = [
     data: "dal 23 giugno al 30 giugno",
     attività: [
       "Coprogettazione di un’azienda agricola rigenerativa con Soulfood Forestfarms",
-      "L'immagine che abita l'ambiente vivente con Arianna Vairo ",
-      "Coprogettazione con Terzo Paesaggio ",
+      "L'immagine che abita l'ambiente vivente con Arianna Vairo",
+      "Coprogettazione con Terzo Paesaggio",
       "Festa fine primo trimestre",
     ],
     corsi: [
       "Strategie di accesso alla terra, Paola Archetti",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Produzione alimentare e principi attivi",
     descrizione: "La produzione alimentare moderna è chiamata a rispondere a una doppia sfida: garantire la sicurezza alimentare globale e preservare la qualità nutrizionale e funzionale degli alimenti. Oltre al loro valore energetico, molti alimenti contengono principi attivi con proprietà benefiche per la salute umana, come antiossidanti, vitamine e composti bioattivi. Questi elementi sono il risultato di processi ecologici complessi e di relazioni armoniche tra piante, suolo e clima. La standardizzazione delle coltivazioni e l’uso intensivo di agrochimici minacciano di impoverire una simile ricchezza, riducendo la diversità genetica e la qualità nutraceutica dei prodotti agricoli. È dunque necessario promuovere metodi di coltivazione rigenerativi, che valorizzino la biodiversità e migliorino la composizione biochimica degli alimenti. La ricerca scientifica, unita al sapere tradizionale, può guidare l’innovazione in questo campo, trasformando il cibo non solo in una fonte di sostentamento, ma in un alleato nella prevenzione e cura delle malattie, integrando agricoltura e salute in un ciclo virtuoso.",
     data: "dal 15 settembre al 28 settembre",
     attività: [
-      "Coltivazione di ortaggi in un’azienda agricola rigenerativa con Giuseppe Bertolina, Allegricola ",
-      "Workshop sui materiali derivanti da scarti agricoli per il design con Alessio Battistella, PoliMi ",
+      "Coltivazione di ortaggi in un’azienda agricola rigenerativa con Giuseppe Bertolina, Allegricola",
+      "Workshop sui materiali derivanti da scarti agricoli per il design con Alessio Battistella, PoliMi",
       "Workshop sulle filiere alimentari e il recupero degli scarti alimentari con Recup",
       "Progettazione e costruzione di tettoie multifunzionali",
     ],
@@ -80,7 +82,7 @@ export const modules = [
       "Economia circolare applicata alla produzione alimentare, Presentazione degli strumenti open source di supporto, Progetto Bioloop, PoliMi",
       "Fondamenti di apicoltura, Valeria De Carolis",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Materie prime. Acqua ed energia",
@@ -93,11 +95,11 @@ export const modules = [
     ],
     corsi: [
       "Gestione rigenerativa della risorsa idrica in azienda agricola con Lorenzo Costa",
-      "Gestione sostenibile dell'acqua, introduzione ai SUDS (Sustainable Urban Draining Systems) e software open source di supporto, Progetto Bioloop, PoliMi",
+      "Gestione sostenibile dell’acqua, introduzione ai SUDS (Sustainable Urban Draining Systems) e software open source di supporto, Progetto Bioloop, PoliMi",
       "Energie rinnovabili ed agrivoltaico, teoria e workshop, Silvia Erba e Matteo Clementi, docenti PoliMi",
       "Analisi del ciclo di vita delle risorse naturali, Giovanni Dotelli o Luciana Mastrolonardo, docenti UniMi",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Regolazione climatica e rischio idrogeologico",
@@ -109,7 +111,7 @@ export const modules = [
     corsi: [
       "Soluzioni basate sulla natura per la resilienza climatica (strategie di adattamento) con Valentina Dessì e Eugenio Morello (DASTU)",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
   {
     titolo: "Depurazione aria, acqua e suolo",
@@ -124,6 +126,6 @@ export const modules = [
     corsi: [
       "Esperienze di Fitorimedio in Italia, Massimo Fagnano",
     ],
-    download: "/moduli/dummy.pdf",
+    // download: "/moduli/dummy.pdf",
   },
 ];
