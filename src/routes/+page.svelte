@@ -428,8 +428,8 @@ h4:not(:first-child) {
 #about::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 1);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 1)*-1);
+  height: calc(var(--headerHeight) + var(--barHeight) * 1 - 1px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 1)*-1 + 1px);
   visibility: hidden;
 }
 
@@ -437,8 +437,8 @@ h4:not(:first-child) {
 #living-lab::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 2);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 2)*-1);
+  height: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 2)*-1 + 1px);
   visibility: hidden;
 }
 
@@ -449,8 +449,8 @@ h4:not(:first-child) {
 .module::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 3);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1);
+  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 1px);
   visibility: hidden;
 }
 .module-navigator {
@@ -518,8 +518,8 @@ h4:not(:first-child) {
 #iscrizioni::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 3);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1);
+  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 1px);
   visibility: hidden;
 }
 .deadline {
@@ -540,8 +540,8 @@ h4:not(:first-child) {
 #info-e-contatti::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 4);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 4)*-1);
+  height: calc(var(--headerHeight) + var(--barHeight) * 4 - 1px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 4)*-1 + 1px);
   visibility: hidden;
 }
 #info-e-contatti p {
