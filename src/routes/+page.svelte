@@ -41,7 +41,7 @@ onMount(() => {
 <section id="hero" class="bg-forest" data-section="hero" use:reachedTop>
   <h1 class="text-l">HanaMi<br>Fare, conoscere e abitare <br class="desktop-only">la transizione ecologica</h1>
 </section>
-<a use:reachedTop data-section="about" href="/#about" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 0)">About</a>
+<a use:reachedTop data-section="about" href="/#about" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 0 - 1px)">About</a>
 <section id="about">
   <div class="bg-green forest">
     <h3 class="text-m">HanaMi è cambiamento, trasformazione situata e coevolutiva. Si radica al margine periurbano, nel primo sistema agroforestale rigenerativo di Milano e qui vuole crescere, assieme ai giovani della città. Campo di apprendimento e sperimentazione, HanaMi è una non-scuola a cielo aperto dove fare, conoscere e abitare la transizione ecologica. Attraverso dispositivi teorici e strumenti realizzativi che permetteranno di conoscere il territorio e di custodirlo, HanaMi si fa rete antifragile di relazioni vicine e lontane.</h3>
@@ -65,9 +65,9 @@ onMount(() => {
           <p>Via Marco D’Agrate 31, Milano</p>
           <li><a class="underline hover-white" href="https://terzopaesaggio.org/" target="_blank" rel="noopener noreferrer">Terzo Paesaggio</a></li>
           <p>Via San Bernardo 42, Milano</p>
-          <li><a class="underline hover-white" href="https://www.polimi.it/sviluppo-sostenibile/innovazione-e-responsabilita-sociale/innovazione-di-prossimita/off-campus/cascina-nosedo" target="_blank" rel="noopener noreferrer">Polisocial Offcampus, Cascina Nosedo</a></li>
+          <!-- <li><a class="underline hover-white" href="https://www.polimi.it/sviluppo-sostenibile/innovazione-e-responsabilita-sociale/innovazione-di-prossimita/off-campus/cascina-nosedo" target="_blank" rel="noopener noreferrer">Polisocial Offcampus, Cascina Nosedo</a></li>
           <p>Via San Dionigi 80, Milano</p>
-          <li><a class="underline hover-white" href="https://www.unimi.it/" target="_blank" rel="noopener noreferrer">Università degli Studi di Milano</a></li>
+          <li><a class="underline hover-white" href="https://www.unimi.it/" target="_blank" rel="noopener noreferrer">Università degli Studi di Milano</a></li> -->
         </ul>
       </div>
       <div class="grid-item">
@@ -77,7 +77,7 @@ onMount(() => {
     </div>
   </div>
 </section>
-<a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1)">Living lab</a>
+<a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 1px)">Living lab</a>
 <section id="living-lab">
   <div class="bg-forest green">
     <h3 class="text-m">Il programma di HanaMi è suddiviso in due trimestri, da aprile a giugno e da settembre a novembre, con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo. L’obiettivo è quello di approfondire temi cruciali relativi alla transizione ecologica attraverso una modalità di apprendimento basata sul fare, conoscere e abitare il campo agricolo in modo collaborativo e co-creativo.</h3>
@@ -148,7 +148,7 @@ onMount(() => {
   </div>
   
 </section>
-<a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2)">Iscrizioni</a>
+<a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Iscrizioni</a>
 <section id="iscrizioni">
   <div class="bg-green forest">
     <h3 class="text-m">Le iscrizioni al Living Lab di HanaMi sono aperte a giovani interessati ai temi della transizione ecologica. Grazie al contributo di Fondazione di Comunità, per questo primo anno di avvio abbiamo potuto mantenere il costo di iscrizione ad HanaMi quanto più accessibile possibile. Il numero ideale di partecipanti è di 25 persone, per questo ci riserviamo di valutare le candidature in modo da poter esprimere al meglio il potenziale di apprendimento.</h3>
@@ -183,7 +183,7 @@ onMount(() => {
     <a href="#" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
   </div>
 </section>
-<a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3)">Info & contatti</a>
+<a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px)">Info & contatti</a>
 <section id="info-e-contatti">
   <div class="bg-forest">
     <p>HanaMi è un progetto nato da Soulfood Forestfarms Hub Italia, organizzazione no-profit che è formata da un’Impresa Sociale e una Associazione di promozione sociale.</p>
