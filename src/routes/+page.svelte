@@ -13,7 +13,7 @@ export function reachedTop(element) {
   
   function checkPosition() {
     const rect = element.getBoundingClientRect();
-    if (rect.top <= topValue) {
+    if (rect.top - 1 <= topValue) {
       sectioner.setSection(element.dataset.section)
     }
   }
