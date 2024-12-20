@@ -30,11 +30,12 @@ export const modules = [
       "Workshop su allevamento galline free-range",
     ],
     corsi: [
+      "Genetica delle piante in agricoltura, Otho Mantegazza",
       "Geografia Fisica, Guglielmina Diolaiuti, UniMi",
       "Climatologia, Antonella Senese, UniMi",
       "Botanica, Ecologia del Paesaggio, Ilda Vagge, UniMi",
       "Clima, open data e open source tool per comprendere il clima locale, Valentina Dessì, PoliMi",
-      "Analisi dei servizi ecosistemici, strumenti open source di supporto, Giulia Dataola, PoliMi dpt. DAStU",
+      "Analisi dei servizi ecosistemici, strumenti open source di supporto, PoliMi dpt. DAStU",
       "Foreste e servizi forestali, Giorgio Vacchiano, UniMi",
       "Servizi Ecosistemici offerti dagli alberi: I-Tree Eco, Giorgio Vacchiano, UniMi",
     ],
@@ -71,6 +72,7 @@ export const modules = [
     corsi: [
       "Strategie di accesso alla terra, Paola Archetti",
       "Bright Ecologies, Caretto/Spagna",
+      "Il benessere psicologico tra identità individuale e comunità: il ruolo degli ambienti naturali e agricoli, Nicola Rainisio, UniMi",
     ],
     // download: "/moduli/dummy.pdf",
   },
@@ -80,12 +82,12 @@ export const modules = [
     data: "dal 15 settembre al 28 settembre",
     attività: [
       "Coltivazione di ortaggi in un’azienda agricola rigenerativa con Giuseppe Bertolina, Allegricola",
-      "Workshop sui materiali derivanti da scarti agricoli per il design con Alessio Battistella, PoliMi",
+      "Workshop sui materiali derivanti da scarti agricoli per il design con Barbara del Curto, PoliMi dpt. CMIC",
       "Workshop sulle filiere alimentari e il recupero degli scarti alimentari con Recup",
       "Progettazione e costruzione di tettoie multifunzionali",
     ],
     corsi: [
-      "Economia circolare applicata alla produzione alimentare, Presentazione degli strumenti open source di supporto, Progetto Bioloop, PoliMi",
+      "Economia circolare applicata alla produzione alimentare, Presentazione degli strumenti open source di supporto, PoliMi dpt. DAStU",
       "Fondamenti di apicoltura, Valeria De Carolis",
       "Il pane e la rete PAU, Davide Longoni",
     ],
@@ -98,12 +100,13 @@ export const modules = [
     attività: [
       "Progettazione e realizzazione di un Rain Garden, Cristiano Del Toro",
       "Progettazione e costruzione di tettoie multifunzionali per la raccolta dell’acqua e produzione di energia",
-      "Workshop sui materiali derivanti da scarti agricoli per l'architettura, Alessio Battistella, PoliMi",
+      "Workshop sui materiali derivanti da scarti agricoli per l'architettura, Alessio Battistella, PoliMi dpt. DAStU",
+      "Lab di autoproduzione energetica con Dario Sabbadini",
     ],
     corsi: [
       "Gestione rigenerativa della risorsa idrica in azienda agricola con Lorenzo Costa",
-      "Gestione sostenibile dell’acqua, introduzione ai SUDS (Sustainable Urban Draining Systems) e software open source di supporto, Progetto Bioloop, PoliMi",
-      "Energie rinnovabili ed agrivoltaico, teoria e workshop, Silvia Erba e Matteo Clementi, PoliMi",
+      "Gestione sostenibile dell’acqua, introduzione ai SUDS (Sustainable Urban Draining Systems) e software open source di supporto, Giovanni Porta, PoliMi dpt. DICA",
+      "Energie rinnovabili ed agrivoltaico, teoria e workshop, Silvia Erba e Matteo Clementi, PoliMi dpt. DAStU",
       "Analisi del ciclo di vita delle risorse naturali, Giovanni Dotelli, PoliMi dpt. CMIC",
     ],
     // download: "/moduli/dummy.pdf",

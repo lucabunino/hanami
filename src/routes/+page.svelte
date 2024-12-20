@@ -192,7 +192,7 @@ onMount(() => {
       <div class="grid-item">
         <p><a class="underline hover-green" href="mailto:hanami@soulfoodforestfarms.it">hanami@soulfoodforestfarms.it</a></p>
         <p><a class="underline hover-green" href="https://www.instagram.com/hanamiscuola/" target="_blank" rel="noopener noreferrer">@hanami_soulfood</a></p>
-        <p>T <a class="underline hover-green" href="tel:+393478898281">+39 347 8898281</a></p>
+        <p>T <a class="underline hover-green" href="tel:+393914848539">+39 391 4848539</a></p>
       </div>
       <div class="grid-item">
         <p>© <a class="underline hover-green" href="https://soulfoodforestfarms.it/" target="_blank" rel="noopener noreferrer">Soulfood Forestfarms Hub Italia</a></p>
