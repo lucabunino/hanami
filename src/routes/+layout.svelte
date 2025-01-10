@@ -43,7 +43,7 @@ function acceptCookies() {
 </div>
 {/if}
 
-{#if $page.url.hostname == 'hanami.soulfoodfarms.it'}
+<!-- {#if $page.url.hostname == 'hanami.soulfoodfarms.it'}
   <div class="temporary-container">
     <div style="top: -1rem;position:relative">
       <p class="temporary-title">HanaMi</p>
@@ -51,7 +51,7 @@ function acceptCookies() {
     </div>
     <p class="temporary-coming-soon">COMING SOON</p>
   </div>
-{:else}
+{:else} -->
 
 <header class="bg-forest">
   <h1 class="logo text-m">
@@ -86,7 +86,7 @@ function acceptCookies() {
     <p><a class="underline hover-green" href="/cookies">Cookie Policy</a></p>
   </div>
 </footer>
-{/if}
+<!-- {/if} -->
 
 
 {#if showBanner}

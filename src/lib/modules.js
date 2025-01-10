@@ -19,7 +19,7 @@ export const modules = [
       "Analisi del metabolismo territoriale locale e impatti ambientali, Matteo Clementi, PoliMi dpt. DAStU",
       "Milano Porta Verde: territorio-laboratorio di ecologia, Gemma Chiaffarelli, Dottoranda UniMi",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/01-modulo_1.pdf",
   },
   {
     titolo: "Habitat",
@@ -39,7 +39,7 @@ export const modules = [
       "Foreste e servizi forestali, Giorgio Vacchiano, UniMi",
       "Servizi Ecosistemici offerti dagli alberi: I-Tree Eco, Giorgio Vacchiano, UniMi",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/02-modulo_2.pdf",
   },
   {
     titolo: "Agroecologia e valori estetico funzionali",
@@ -57,12 +57,12 @@ export const modules = [
       "Architettura del Paesaggio, Cristiano Del Toro, architetto paesaggista",
       "Agricoltura sintropica secondo Ernst Gotsch, Gabriel Menezes e Alessandro Di Donna",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/03-modulo_3.pdf",
   },
   {
     titolo: "Coesione socio-territoriale e benessere psico-fisico",
     descrizione: "Il legame tra la comunità umana e il territorio è un filo invisibile ma potente, che intreccia identità culturale, relazioni sociali e salute collettiva. La coesione socio-territoriale si manifesta nella capacità di creare spazi inclusivi e resilienti, dove la qualità ambientale si traduce in qualità della vita. Un ambiente sano promuove il benessere psico-fisico delle persone: il contatto con la natura riduce lo stress, migliora le funzioni cognitive e stimola l’empatia e il senso di appartenenza. La frammentazione urbana e le disuguaglianze territoriali rischiano di spezzare tale equilibrio, escludendo comunità vulnerabili dall’accesso a risorse naturali e servizi essenziali. Integrare il verde pubblico negli spazi urbani, promuovere forme di partecipazione attiva nella gestione del territorio e valorizzare le tradizioni locali sono azioni chiave per rinsaldare il tessuto socio-ecologico. In questo contesto, il benessere individuale diventa parte di una visione collettiva, dove la salute umana e quella dell’ambiente sono indissolubilmente connesse.",
-    data: "dal 23 giugno al 30 giugno",
+    data: "dal 22 giugno al 6 luglio",
     attività: [
       "Coprogettazione di un’azienda agricola rigenerativa con Soulfood Forestfarms",
       "L'immagine che abita l'ambiente vivente con Arianna Vairo",
@@ -74,7 +74,7 @@ export const modules = [
       "Bright Ecologies, Caretto/Spagna",
       "Il benessere psicologico tra identità individuale e comunità: il ruolo degli ambienti naturali e agricoli, Nicola Rainisio, UniMi",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/04-modulo_4.pdf",
   },
   {
     titolo: "Produzione alimentare e principi attivi",
@@ -91,7 +91,7 @@ export const modules = [
       "Fondamenti di apicoltura, Valeria De Carolis",
       "Il pane e la rete PAU, Davide Longoni",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/05-modulo_5.pdf",
   },
   {
     titolo: "Materie prime. Acqua ed energia",
@@ -109,7 +109,7 @@ export const modules = [
       "Energie rinnovabili ed agrivoltaico, teoria e workshop, Silvia Erba e Matteo Clementi, PoliMi dpt. DAStU",
       "Analisi del ciclo di vita delle risorse naturali, Erpinio Labrozzi, PoliMi dpt. ABC",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/06-modulo_6.pdf",
   },
   {
     titolo: "Regolazione climatica e rischio idrogeologico",
@@ -125,7 +125,7 @@ export const modules = [
       "Immagini Satellitari e indici di vegetazione",
       "Mercato VCM e crediti di carbonio",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/07-modulo_7.pdf",
   },
   {
     titolo: "Depurazione aria, acqua e suolo",
@@ -142,6 +142,6 @@ export const modules = [
       "Esperienze di Fitorimedio in Italia, Massimo Fagnano",
       "Sensoristica DIY per l’analisi di aria suolo e acqua con Paolo Bonelli",
     ],
-    // download: "/moduli/dummy.pdf",
+    download: "/moduli/08-modulo_8.pdf",
   },
 ];

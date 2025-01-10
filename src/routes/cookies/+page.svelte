@@ -1,5 +1,5 @@
 <section id="privacy" class="bg-white forest">
-  <h1 class="text-m">Cookies Policy di hanami.soulfoodforestfarms.it</h1>
+  <h1 class="text-m">Cookie Policy di hanami.soulfoodforestfarms.it</h1>
   <p>Ultimo aggiornamento 05.12.2024</p>
   <p>Siamo HanaMi. Questa Cookie Policy descrive come raccogliamo, utilizziamo e gestiamo i cookie, oltre a fornirti informazioni sui tuoi diritti e sulle tue scelte riguardo l'uso dei cookie.</p>
   <p>Puoi contattarci all'indirizzo email: <a class="underline hover-green" href="mailto:hanami@soulfoodforestfarms.it">hanami@soulfoodforestfarms.it</a></p>

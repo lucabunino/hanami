@@ -39,6 +39,13 @@ onMount(() => {
 <svelte:window bind:innerHeight></svelte:window>
 
 <section id="hero" class="bg-forest" data-section="hero" use:reachedTop>
+  <div class="bg-video-container">
+    <video class="bg-video" autoplay muted loop playsinline poster="/video/bg.png">
+      <source src="/video/bg.webm" type="video/webm">
+      <source src="/video/bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
   <h1 class="text-l">HanaMi<br>Fare, conoscere e abitare <br class="desktop-only">la transizione ecologica</h1>
 </section>
 <a use:reachedTop data-section="about" href="/#about" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 0 - 1px)">About</a>
@@ -141,9 +148,10 @@ onMount(() => {
     <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Programma completo</a>
     <div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
       <div class="grid big">
+        <!-- <p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p> -->
         <p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
       </div>
-      <a href="/moduli/dummy.pdf" class="btn download all" target="_blank" rel="noopener noreferrer">Download</a>
+      <a href="/moduli/00-programma_completo.pdf" class="btn download all" target="_blank" rel="noopener noreferrer">Download</a>
     </div>
   </div>
   
@@ -180,7 +188,7 @@ onMount(() => {
         <p>Deadline per invio della candidatura</p>
       </div>
     </div>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
+    <a href="https://forms.gle/osoWan8dXmE5zNo98" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
   </div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px)">Info & contatti</a>
@@ -410,18 +418,41 @@ h4:not(:first-child) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image:url(/img/bg-desktop.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: sticky;
   margin-top: var(--headerHeight);
   top: var(--headerHeight);
   z-index: -1;
+  overflow: hidden;
 }
+
+.bg-video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center;
+  width: 80vh;
+  height: 100vw;
+  padding: 0 !important;
+}
+
+.bg-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #hero h1 {
   width: 80%;
   margin-bottom: .5em;
+  z-index: 1;
+}
+@media screen and (max-width: 900px) {
+  .bg-video-container {
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* About */
