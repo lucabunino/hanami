@@ -40,10 +40,13 @@ onMount(() => {
 
 <section id="hero" class="bg-forest" data-section="hero" use:reachedTop>
   <div class="bg-video-container">
-    <video class="bg-video" autoplay muted loop playsinline poster="/video/bg.png">
-      <source src="/video/bg.webm" type="video/webm">
-      <source src="/video/bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+    <video class="bg-video desktop-only" autoplay muted loop playsinline poster="/video/bg.jpg">
+      <source src="/video/bg-desktop.webm" type="video/webm">
+      <source src="/video/bg-desktop.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video mobile-only" autoplay muted loop playsinline poster="/video/bg.jpg">
+      <source src="/video/bg-mobile.webm" type="video/webm">
+      <source src="/video/bg-mobile.mp4" type="video/mp4">
     </video>
   </div>
   <h1 class="text-l">HanaMi<br>Fare, conoscere e abitare <br class="desktop-only">la transizione ecologica</h1>
