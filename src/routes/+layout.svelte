@@ -65,8 +65,8 @@ function acceptCookies() {
       <div class="line"></div>
     </div>
     <ul>
-      <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'about'} href="/#about" aria-label="Scopri di più su di noi">About</a></li>
-      <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'living-lab'} href="/#living-lab" aria-label="Esplora i nostri corsi">Living lab</a></li>
+      <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'chi-siamo'} href="/#chi-siamo" aria-label="Scopri di più su di noi">Chi siamo</a></li>
+      <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'programma'} href="/#programma" aria-label="Esplora i nostri corsi">Programma</a></li>
       <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'iscrizioni'} href="/#iscrizioni" aria-label="Iscriviti ai nostri corsi">Iscrizioni</a></li>
       <li class="menu-item"><a class="hover-green" onclick={(e) => {showMenu = false}} onkeydown={(e) => {if (e.key === 'Enter' || e.key === ' ') {showMenu = false}}} class:active-green={sectioner.section === 'info-e-contatti'} href="/#info-e-contatti" aria-label="Contattaci e trova maggiori informazioni">Info & contatti</a></li>
     </ul>
@@ -190,6 +190,11 @@ nav ul {
   list-style: none;
   gap: 2.2rem;
   text-transform: uppercase;
+}
+nav ul li:before {
+  position: unset;
+  left: unset;
+  content: "";
 }
 footer {
   display: flex;
