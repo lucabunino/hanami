@@ -191,7 +191,7 @@ onMount(() => {
         <p>Deadline per invio della candidatura</p>
       </div> -->
     </div>
-    <a href="https://forms.gle/osoWan8dXmE5zNo98" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
+    <a href="https://forms.gle/Vfents4EbEjez1KE7" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
   </div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
