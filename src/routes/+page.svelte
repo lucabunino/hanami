@@ -87,7 +87,7 @@ onMount(() => {
     </div>
   </div>
 </section>
-<a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 1px)">Living lab</a>
+<a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 2px)">Living lab</a>
 <section id="living-lab">
   <div class="bg-forest green">
     <h3 class="text-m">Il programma di HanaMi è suddiviso in due trimestri, da aprile a giugno e da settembre a novembre, con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo. L’obiettivo è quello di approfondire temi cruciali relativi alla transizione ecologica attraverso una modalità di apprendimento basata sul fare, conoscere e abitare il campo agricolo in modo collaborativo e co-creativo.</h3>
@@ -105,11 +105,11 @@ onMount(() => {
   </div>
   <div id="modules" class="bg-white forest">
     {#each modules as module, i}
-      <a href="/#modulo{i+1}" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Modulo {i+1}</a>
+      <a href="/#modulo{i+1}" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Modulo {i+1}</a>
       <div class="module" id="modulo{i+1}">
         <div class="bg-white forest">
           <h2 class="text-m module-title">{module.titolo}</h2>
-          <div class="grid big">
+          <div class="grid big mobile-grid">
             <div class="grid-item">
               <p class="module-description">{module.descrizione}</p>
               {#if module.data}
@@ -119,7 +119,7 @@ onMount(() => {
                 </div>
               {/if}
               {#if module.attività}
-                <div class="module-side">
+                <div class="module-side mobile-side">
                   <h4>Attività</h4>
                   <ul>
                     {#each module.attività as attivitàItem}
@@ -131,7 +131,7 @@ onMount(() => {
             </div>
             <div class="grid-item">
               {#if module.corsi}
-                <h4>Docenti e corsi</h4>
+                <h4 class="mobile-docenti">Docenti e corsi</h4>
                 <ul>
                   {#each module.corsi as corso}
                     <li>{corso}</li>
@@ -139,16 +139,16 @@ onMount(() => {
                 </ul>
               {/if}
               {#if module.download}
-                <h4>Scopri di più</h4>
-                <p>Scarica il PDF con i contenuti completi del modulo, il calendario e gli orari delle lezioni</p>
-                <a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">Download</a>
+                <!-- <h4 class="mobile-scopri">Scopri di più</h4> -->
+                <!-- <p>Scarica il PDF con i contenuti completi del modulo, il calendario e gli orari delle lezioni</p> -->
+                <a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">Vedi il calendario</a>
               {/if}
             </div>
           </div>
         </div>
       </div>
     {/each}
-    <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Programma completo</a>
+    <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Programma completo</a>
     <div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
       <div class="grid big">
         <!-- <p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p> -->
@@ -159,7 +159,7 @@ onMount(() => {
   </div>
   
 </section>
-<a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">Iscrizioni</a>
+<a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Iscrizioni</a>
 <section id="iscrizioni">
   <div class="bg-green forest">
     <h3 class="text-m">Le iscrizioni al Living Lab di HanaMi sono aperte a giovani interessati ai temi della transizione ecologica. Grazie al contributo di Fondazione di Comunità, per questo primo anno di avvio abbiamo potuto mantenere il costo di iscrizione ad HanaMi quanto più accessibile possibile. Il numero ideale di partecipanti è di 25 persone, per questo ci riserviamo di valutare le candidature in modo da poter esprimere al meglio il potenziale di apprendimento.</h3>
@@ -185,16 +185,16 @@ onMount(() => {
         </ul>
         <p class="mt-1">Compila il form sottostante per inviare la tua candidatura e avviare la procedura di iscrizione al corso.</p>
       </div>
-      <div class="grid-item">
+      <!-- <div class="grid-item">
         <h3 class="text-m mobile-title">Scadenze</h3>
-        <p class="deadline">31 Gennaio 2025</p>
+        <p class="deadline">28 Febbraio 2025</p>
         <p>Deadline per invio della candidatura</p>
-      </div>
+      </div> -->
     </div>
     <a href="https://forms.gle/osoWan8dXmE5zNo98" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
   </div>
 </section>
-<a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px)">Info & contatti</a>
+<a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
 <section id="info-e-contatti">
   <div class="bg-forest">
     <p>HanaMi è un progetto nato da Soulfood Forestfarms Hub Italia, organizzazione no-profit che è formata da un’Impresa Sociale e una Associazione di promozione sociale.</p>
@@ -338,7 +338,6 @@ h4:not(:first-child) {
   .grid.single .grid-item {
     grid-column: 1 / span 7;
   }
-
   .grid.small .grid-item:nth-child(1) {
     grid-column: 1 / span 4;
   }
@@ -471,8 +470,8 @@ h4:not(:first-child) {
 #living-lab::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 2)*-1 + 1px);
+  height: calc(var(--headerHeight) + var(--barHeight) * 2 - 2px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 2)*-1 + 2px);
   visibility: hidden;
 }
 
@@ -483,8 +482,8 @@ h4:not(:first-child) {
 .module::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 1px);
+  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 3px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 3px);
   visibility: hidden;
 }
 .module-navigator {
@@ -536,9 +535,7 @@ h4:not(:first-child) {
   }
   .module-side:first-of-type {
     margin-top: 3rem;
-  }
-  .module-side:last-of-type {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .module-side h4 {
     flex-basis: 20%;
@@ -546,14 +543,20 @@ h4:not(:first-child) {
   .module-side ul {
     flex-basis: 80%;
   }
+  h4.mobile-scopri {
+    margin-top: 2rem;
+  }
+  .grid.big.mobile-grid {
+    row-gap: 2rem;
+  }
 }
 
 /* Iscrizioni */
 #iscrizioni::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 1px);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 1px);
+  height: calc(var(--headerHeight) + var(--barHeight) * 3 - 3px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 3)*-1 + 3px);
   visibility: hidden;
 }
 .deadline {
@@ -574,8 +577,8 @@ h4:not(:first-child) {
 #info-e-contatti::before {
   content: '';
   display: block;
-  height: calc(var(--headerHeight) + var(--barHeight) * 4 - 1px);
-  margin-top: calc((var(--headerHeight) + var(--barHeight) * 4)*-1 + 1px);
+  height: calc(var(--headerHeight) + var(--barHeight) * 4 - 4px);
+  margin-top: calc((var(--headerHeight) + var(--barHeight) * 4)*-1 + 4px);
   visibility: hidden;
 }
 #info-e-contatti p {

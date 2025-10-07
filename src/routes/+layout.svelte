@@ -2,20 +2,21 @@
 import '../app.css'
 import { page } from '$app/stores';
 import { onMount } from 'svelte';
+import { pushState, replaceState } from '$app/navigation';
 const { children } = $props()
 
 // Import stores
 import { getSection } from '$lib/stores/section.svelte.js';
 const sectioner = getSection();
+let showMenu = $state(false)
 
 // Grid (not needed in production)
 let viewGrid = $state(false)
 const gridColumnsDesktop = 16
 const gridColumnsMobile = 4
 function handleKey({key}) {if (key === 'G') {viewGrid = !viewGrid}}
-let showBanner = $state()
-let showMenu = $state(false)
 
+let showBanner = $state()
 onMount(() => {
   const cookieConsent = localStorage.getItem('cookieConsent');
   if (cookieConsent === 'accepted') {
