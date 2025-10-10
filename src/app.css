@@ -198,6 +198,10 @@ ol li:before {
 		font-size: 3rem;
 		line-height: 1.1;
 	}
+	.text-ml {
+		font-family: Kolonia, 'Times New Roman', Times, serif;
+		font-size: 1.333rem;
+	}
 	.text-m {
 		font-size: 1.125rem;
 	}
