@@ -147,14 +147,14 @@ onMount(() => {
 				</div>
 			</div>
 		{/each}
-		<a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Programma completo</a>
+		<!-- <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Programma completo</a>
 		<div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
 			<div class="grid big">
-				<!-- <p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p> -->
+				<p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p>
 				<p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
 			</div>
 			<a href="/moduli/00-programma_completo.pdf" class="btn download all" target="_blank" rel="noopener noreferrer">Download</a>
-		</div>
+		</div> -->
 	</div>
 	
 </section>
@@ -187,7 +187,7 @@ onMount(() => {
 		</div> -->
 		<a href="https://forms.gle/Vfents4EbEjez1KE7" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
 		<h4>Scarica il programma completo</h4>
-		<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer" class="btn mt-2">Download</a>
+		<a href="https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome" target="_blank" rel="noopener noreferrer" class="btn mt-2">Download</a>
 	</div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
