@@ -156,6 +156,9 @@ a:-webkit-any-link.white,
 .mt-2{
 	margin-top: 1.8rem;
 }
+.mb-0 {
+	margin-bottom: 0;
+}
 ul {
 	padding-left: 1em;
 }

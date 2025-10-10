@@ -107,14 +107,14 @@ onMount(() => {
 					<h2 class="text-m module-title">{module.titolo}</h2>
 					<div class="grid big mobile-grid">
 						<div class="grid-item">
-							<p class="module-description">{module.descrizione}</p>
 							{#if module.data}
 								<div class="module-side">
 									<h4>Date</h4>
 									<p>{module.data}</p>
 								</div>
 							{/if}
-							{#if module.attività}
+							<p class="module-description">{module.descrizione}</p>
+							<!-- {#if module.attività}
 								<div class="module-side mobile-side">
 									<h4>Attività</h4>
 									<ul>
@@ -123,21 +123,24 @@ onMount(() => {
 										{/each}
 									</ul>
 								</div>
+							{/if} -->
+							{#if module.prezzo}
+								<h4 class="module-scopri mb-0">Costo modulo</h4>
+								<p>€ {module.prezzo} IVA inclusa</p>
+							{/if}
+							{#if module.download}
+								<h4 class="module-scopri module-download-title mb-0">Scarica calendario modulo</h4>
+								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">Download</a>
 							{/if}
 						</div>
 						<div class="grid-item">
 							{#if module.corsi}
-								<h4 class="mobile-docenti">Docenti e corsi</h4>
+								<h4 class="mobile-docenti">Docenti</h4>
 								<ul>
 									{#each module.corsi as corso}
 										<li>{corso}</li>
 									{/each}
 								</ul>
-							{/if}
-							{#if module.download}
-								<!-- <h4 class="mobile-scopri">Scopri di più</h4> -->
-								<!-- <p>Scarica il PDF con i contenuti completi del modulo, il calendario e gli orari delle lezioni</p> -->
-								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">Vedi il calendario</a>
 							{/if}
 						</div>
 					</div>
@@ -325,7 +328,6 @@ h4:not(:first-child) {
 	color: var(--forest);
 }
 .btn.download {
-	margin-top: 1rem;
 	text-transform: none;
 }
 .btn.download:hover {
@@ -535,21 +537,23 @@ h4:not(:first-child) {
 .module-title {
 	padding: .5rem 0;
 }
-.module h4 {
-	margin-bottom: .6rem;
+.module h4:not(.mb-0) {
+	margin-bottom: 1.8rem;
 }
 .module-description {
-	margin-bottom: 1.2rem;
+	margin-bottom: 1.8rem;
 }
 .module-side {
 	display: flex;
-	margin-bottom: .6rem;
 }
 .module-side h4 {
 	flex-basis: 25%;
 }
 .module-side ul {
 	flex-basis: 75%;
+}
+.module-download-title {
+	margin-bottom: .9rem;
 }
 #programma-completo {
 	padding: 0 1rem;
@@ -576,7 +580,7 @@ h4:not(:first-child) {
 	.module-side ul {
 		flex-basis: 80%;
 	}
-	h4.mobile-scopri {
+	h4.module-scopri {
 		margin-top: 2rem;
 	}
 	.grid.big.mobile-grid {
