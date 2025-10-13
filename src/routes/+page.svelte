@@ -84,16 +84,16 @@ onMount(() => {
 <a use:reachedTop data-section="programma" href="/#programma" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 2px)">Programma</a>
 <section id="programma">
 	<div class="bg-forest green">
-		<h3 class="text-m">Il programma di HanaMI 2025/26 è per questo motivo strutturato in 8 moduli progettati per rispondere a domande fondamentali sulla traiettoria climatica.</h3>
+		<h3 class="text-m">Il programma di HanaMI 2025/26 è strutturato in 8 moduli progettati per rispondere a domande fondamentali sulla traiettoria climatica.</h3>
 		<h3 class="text-m">Professionisti esperti nel settore della rigenerazione del paesaggio, sia esso urbano, periurbano o rurale, sono sempre più indispensabili e richiesti.</h3>
 		<h3 class="text-m">Con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo, miriamo a offrire un’alternativa formativa in grado di fornire strumenti per risposte immediate e con impatti duraturi sugli ecosistemi.</h3>
 		<div class="grid single">
 			<div class="grid-item">
 				<ul>
-					<li>56 ore di lezione con docenti di Urban & Rural</li>
-					<li>56 ore di esercitazioni in aziende agricole, studi di agronomia e architettura rigenerativa</li>
-					<li>100 ore di supporto documentato, dispense didattiche e autoapprendimento</li>
-					<li>120 ore di stage in aziende, associazioni, studi di architettura</li>
+					<li>96 ore di lezioni con docenti di Unimi e Polimi</li>
+					<li>96 ore di lezioni con professionisti ed esperti di agroecologia e architettura rigenerativa</li>
+					<li>96 ore di flipped classroom, documentari e autoformazione</li>
+					<li>2 ettari di terreno da rigenerare con oltre 140 ore di pratica e workshop</li>
 					<li>64 ore di formazione di gruppo con oltre 40 ospiti e workshop</li>
 				</ul>
 			</div>
