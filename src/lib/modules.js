@@ -9,7 +9,7 @@ export const modules = [
       "Altri docenti in via di definizione",
     ],
 	prezzo: 500,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Habitat",
@@ -21,7 +21,7 @@ export const modules = [
       "altri docenti e professionisti ospiti",
     ],
 	prezzo: 600,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Agroecologia e valori estetico funzionali",
@@ -33,7 +33,7 @@ export const modules = [
       "ospiti esterni",
     ],
 	prezzo: 500,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Coesione socio-territoriale e benessere psico-fisico",
@@ -45,7 +45,7 @@ export const modules = [
       "Il benessere psicologico tra identità individuale e comunità: il ruolo degli ambienti naturali e agricoli, Nicola Rainisio, UniMi",
     ],
 	prezzo: 300,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Produzione alimentare e principi attivi",
@@ -57,7 +57,7 @@ export const modules = [
       "Il pane e la rete PAU, Davide Longoni",
     ],
 	prezzo: 400,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Materie prime. Acqua ed energia",
@@ -69,7 +69,7 @@ export const modules = [
       "ospiti esterni",
     ],
 	prezzo: 700,
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Regolazione climatica e rischio idrogeologico",
@@ -81,7 +81,7 @@ export const modules = [
       "Chiara Neri, Climatologa, CNR",
       "ospiti esterni",
     ],
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     titolo: "Depurazione aria, acqua e suolo",
@@ -92,6 +92,6 @@ export const modules = [
       "Michele Ruggiero, Ingegnere ambientale",
       "ospiti esterni",
     ],
-    download: "https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome",
+    download: "https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
 ];

@@ -129,8 +129,8 @@ onMount(() => {
 								<p>€ {module.prezzo} IVA inclusa</p>
 							{/if}
 							{#if module.download}
-								<h4 class="module-scopri module-download-title mb-0">Scarica calendario modulo</h4>
-								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">Download</a>
+								<h4 class="module-scopri module-download-title mb-0">Vedi calendario modulo</h4>
+								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">CALENDARIO</a>
 							{/if}
 						</div>
 						<div class="grid-item">
@@ -186,8 +186,8 @@ onMount(() => {
 			</div>
 		</div> -->
 		<a href="https://forms.gle/Vfents4EbEjez1KE7" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
-		<h4>Scarica il programma completo</h4>
-		<a href="https://calendar.google.com/calendar/embed?src=c_faf29b58128db524f1bcb906373867e60e457030e1f864f1d9157afee43d3e49%40group.calendar.google.com&ctz=Europe%2FRome" target="_blank" rel="noopener noreferrer" class="btn mt-2">Download</a>
+		<h4>Vedi il programma completo</h4>
+		<a href="https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" class="btn mt-1">Calendario</a>
 	</div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
@@ -364,7 +364,7 @@ h4:not(:first-child) {
 	color: var(--forest);
 }
 .grid + .btn {
-	margin-top: 1.5rem;
+	margin-top: .2rem;
 	margin-bottom: 2rem;
 }
 @media screen and (max-width: 1200px) {
@@ -693,7 +693,7 @@ h4:not(:first-child) {
 	    flex-basis: 75%;
 }
 .module-download-title {
-	margin-bottom: .9rem;
+	margin-bottom: 1.2rem;
 }
 #programma-completo {
 	padding: 0 1rem;
