@@ -130,7 +130,7 @@ onMount(() => {
 							{/if}
 							{#if module.download}
 								<h4 class="module-scopri module-download-title mb-0">Vedi calendario modulo</h4>
-								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">CALENDARIO</a>
+								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">VAI AL CALENDARIO</a>
 							{/if}
 						</div>
 						<div class="grid-item">
@@ -187,7 +187,7 @@ onMount(() => {
 		</div> -->
 		<a href="https://forms.gle/Vfents4EbEjez1KE7" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
 		<h4>Vedi il programma completo</h4>
-		<a href="https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" class="btn mt-1">Calendario</a>
+		<a href="https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" class="btn mt-1">VAI AL CALENDARIO</a>
 	</div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
