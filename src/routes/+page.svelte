@@ -124,10 +124,10 @@ onMount(() => {
 									</ul>
 								</div>
 							{/if} -->
-							{#if module.prezzo}
+							<!-- {#if module.prezzo}
 								<h4 class="module-scopri mb-0">Costo modulo</h4>
 								<p>€ {module.prezzo} IVA inclusa</p>
-							{/if}
+							{/if} -->
 							{#if module.download}
 								<h4 class="module-scopri module-download-title mb-0">Vedi calendario modulo</h4>
 								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">VAI AL CALENDARIO</a>
