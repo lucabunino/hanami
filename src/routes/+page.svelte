@@ -87,6 +87,7 @@ onMount(() => {
     </div>
   </div>
 </section>
+<<<<<<< Updated upstream
 <a use:reachedTop data-section="living-lab" href="/#living-lab" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 2px)">Living lab</a>
 <section id="living-lab">
   <div class="bg-forest green">
@@ -158,6 +159,84 @@ onMount(() => {
     </div>
   </div>
   
+=======
+<a use:reachedTop data-section="programma" href="/#programma" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 2px)">Programma</a>
+<section id="programma">
+	<div class="bg-forest green">
+		<h3 class="text-m">Il programma di HanaMI 2025/26 è strutturato in 8 moduli progettati per rispondere a domande fondamentali sulla traiettoria climatica.</h3>
+		<h3 class="text-m">Professionisti esperti nel settore della rigenerazione del paesaggio, sia esso urbano, periurbano o rurale, sono sempre più indispensabili e richiesti.</h3>
+		<h3 class="text-m">Con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo, miriamo a offrire un’alternativa formativa in grado di fornire strumenti per risposte immediate e con impatti duraturi sugli ecosistemi.</h3>
+		<div class="grid single">
+			<div class="grid-item">
+				<ul>
+					<li>96 ore di lezioni con docenti di Unimi e Polimi</li>
+					<li>96 ore di lezioni con professionisti ed esperti di agroecologia e architettura rigenerativa</li>
+					<li>96 ore di flipped classroom, documentari e autoformazione</li>
+					<li>2 ettari di terreno da rigenerare con oltre 140 ore di pratica e workshop</li>
+					<li>64 ore di formazione di gruppo con oltre 40 ospiti e workshop</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="modules" class="bg-white forest">
+		{#each modules as module, i}
+			<a href="/#modulo{i+1}" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Modulo {i+1}</a>
+			<div class="module" id="modulo{i+1}">
+				<div class="bg-white forest">
+					<h2 class="text-m module-title">{module.titolo}</h2>
+					<div class="grid big mobile-grid">
+						<div class="grid-item">
+							{#if module.data}
+								<div class="module-side">
+									<h4>Date</h4>
+									<p>{module.data}</p>
+								</div>
+							{/if}
+							<p class="module-description">{module.descrizione}</p>
+							<!-- {#if module.attività}
+								<div class="module-side mobile-side">
+									<h4>Attività</h4>
+									<ul>
+										{#each module.attività as attivitàItem}
+											<li>{attivitàItem}</li>
+										{/each}
+									</ul>
+								</div>
+							{/if} -->
+							<!-- {#if module.prezzo}
+								<h4 class="module-scopri mb-0">Costo modulo</h4>
+								<p>€ {module.prezzo} IVA inclusa</p>
+							{/if} -->
+							{#if module.download}
+								<h4 class="module-scopri module-download-title mb-0">Vedi calendario modulo</h4>
+								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">VAI AL CALENDARIO</a>
+							{/if}
+						</div>
+						<div class="grid-item">
+							{#if module.corsi}
+								<h4 class="mobile-docenti">Docenti</h4>
+								<ul>
+									{#each module.corsi as corso}
+										<li>{corso}</li>
+									{/each}
+								</ul>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		{/each}
+		<!-- <a href="/#programma-completo" class="module-navigator bg-white forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Programma completo</a>
+		<div id="programma-completo" class="module" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 1px)">
+			<div class="grid big">
+				<p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p>
+				<p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
+			</div>
+			<a href="/moduli/00-programma_completo.pdf" class="btn download all" target="_blank" rel="noopener noreferrer">Download</a>
+		</div> -->
+	</div>
+	
+>>>>>>> Stashed changes
 </section>
 <a use:reachedTop data-section="iscrizioni" href="/#iscrizioni" class="section-navigator bg-green" style="top: calc(var(--headerHeight) + var(--barHeight) * 2 - 3px)">Iscrizioni</a>
 <section id="iscrizioni">
