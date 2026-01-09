@@ -84,17 +84,17 @@ onMount(() => {
 <a use:reachedTop data-section="programma" href="/#programma" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 1 - 2px)">Programma</a>
 <section id="programma">
 	<div class="bg-forest green">
-		<h3 class="text-m">Il programma di HanaMI 2025/26 è strutturato in 8 moduli progettati per rispondere a domande fondamentali sulla traiettoria climatica.</h3>
+		<h3 class="text-m">Il programma di HanaMI 2026 è strutturato in 8 moduli progettati per rispondere a domande fondamentali sulla traiettoria climatica.</h3>
 		<h3 class="text-m">Professionisti esperti nel settore della rigenerazione del paesaggio, sia esso urbano, periurbano o rurale, sono sempre più indispensabili e richiesti.</h3>
-		<h3 class="text-m">Con oltre 400 ore di lezioni, laboratori ed esercitazioni sul campo, miriamo a offrire un’alternativa formativa in grado di fornire strumenti per risposte immediate e con impatti duraturi sugli ecosistemi.</h3>
+		<h3 class="text-m">Con oltre 200 ore di lezioni, laboratori ed esercitazioni sul campo, miriamo a offrire un’alternativa formativa in grado di fornire strumenti per risposte immediate e con impatti duraturi sugli ecosistemi.</h3>
 		<div class="grid single">
 			<div class="grid-item">
 				<ul>
-					<li>96 ore di lezioni con docenti di Unimi e Polimi</li>
-					<li>96 ore di lezioni con professionisti ed esperti di agroecologia e architettura rigenerativa</li>
-					<li>96 ore di flipped classroom, documentari e autoformazione</li>
-					<li>2 ettari di terreno da rigenerare con oltre 140 ore di pratica e workshop</li>
-					<li>64 ore di formazione di gruppo con oltre 40 ospiti e workshop</li>
+					<li>50+ ore di lezioni con docenti di Unimi e Polimi</li>
+					<li>50+ ore di lezioni con professionisti ed esperti di agroecologia e architettura rigenerativa</li>
+					<li>50+ ore di flipped classroom, documentari e autoformazione</li>
+					<li>4 Laboratori del fare su Acqua, Agroforestazione, Cucina e Falegnameria</li>
+					<li>2 ettari di terreno da rigenerare con oltre 50 ore di pratica e workshop</li>
 				</ul>
 			</div>
 		</div>
@@ -128,17 +128,17 @@ onMount(() => {
 								<h4 class="module-scopri mb-0">Costo modulo</h4>
 								<p>€ {module.prezzo} IVA inclusa</p>
 							{/if} -->
-							{#if module.download}
-								<h4 class="module-scopri module-download-title mb-0">Vedi calendario modulo</h4>
-								<a href={module.download} class="btn download" target="_blank" rel="noopener noreferrer">VAI AL CALENDARIO</a>
+							{#if module.link}
+								<!-- <h4 class="module-scopri module-link-title mb-0">Vedi calendario modulo</h4> -->
+								<a href={module.link} class="btn link" target="_blank" rel="noopener noreferrer">VAI AL CALENDARIO</a>
 							{/if}
 						</div>
 						<div class="grid-item">
-							{#if module.corsi}
+							{#if module.docenti}
 								<h4 class="mobile-docenti">Docenti</h4>
 								<ul>
-									{#each module.corsi as corso}
-										<li>{corso}</li>
+									{#each module.docenti as docente}
+										<li>{docente}</li>
 									{/each}
 								</ul>
 							{/if}
@@ -153,7 +153,7 @@ onMount(() => {
 				<p class="grid-item">Il programma dettagliato verrà caricato entro la prima settimana di gennaio</p>
 				<p class="grid-item">Scarica il PDF con la descrizione completa e il calendario di tutti i moduli di HanaMi</p>
 			</div>
-			<a href="/moduli/00-programma_completo.pdf" class="btn download all" target="_blank" rel="noopener noreferrer">Download</a>
+			<a href="/moduli/00-programma_completo.pdf" class="btn link all" target="_blank" rel="noopener noreferrer">link</a>
 		</div> -->
 	</div>
 	
@@ -185,9 +185,9 @@ onMount(() => {
 				<p>Deadline per invio della candidatura</p>
 			</div>
 		</div> -->
-		<a href="https://forms.gle/Vfents4EbEjez1KE7" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
-		<h4>Vedi il programma completo</h4>
-		<a href="https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" class="btn mt-1">VAI AL CALENDARIO</a>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSemYNtG0FuahJiELf_9RSg_0ETZzcr4HZT2RDUNTeSPrA_bsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn form">Vai al form</a>
+		<!-- <h4>Vedi il programma completo</h4>
+		<a href="https://calendar.google.com/calendar/u/0/r?cid=Yzc5MjcyNDVjZjA3ZjNhMTc1YTM0ZmI1MjNjMTAzNmRjM2RmYjFlNzNiM2E4ODA5YjU2YjI2NzBlMThjMTA5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer" class="btn mt-1">VAI AL CALENDARIO</a> -->
 	</div>
 </section>
 <a use:reachedTop data-section="info-e-contatti" href="/#info-e-contatti" class="section-navigator bg-forest" style="top: calc(var(--headerHeight) + var(--barHeight) * 3 - 4px)">Info & contatti</a>
@@ -198,7 +198,7 @@ onMount(() => {
 		<div class="grid small">
 			<div class="grid-item">
 				<p><a class="underline hover-green" href="mailto:hanami@soulfoodforestfarms.it">hanami@soulfoodforestfarms.it</a></p>
-				<p><a class="underline hover-green" href="https://www.instagram.com/hanamiscuola/" target="_blank" rel="noopener noreferrer">@hanami_soulfood</a></p>
+				<p><a class="underline hover-green" href="https://www.instagram.com/hanamiscuola/" target="_blank" rel="noopener noreferrer">@hanamiscuola</a></p>
 				<p>T <a class="underline hover-green" href="tel:+393914848539">+39 391 4848539</a></p>
 			</div>
 			<div class="grid-item">
@@ -356,10 +356,10 @@ h4:not(:first-child) {
 	background-color: var(--white);
 	color: var(--forest);
 }
-.btn.download {
+.btn.link {
 	text-transform: none;
 }
-.btn.download:hover {
+.btn.link:hover {
 	background-color: var(--green);
 	color: var(--forest);
 }
@@ -692,7 +692,7 @@ h4:not(:first-child) {
 	-ms-flex-preferred-size: 75%;
 	    flex-basis: 75%;
 }
-.module-download-title {
+.module-link-title {
 	margin-bottom: 1.2rem;
 }
 #programma-completo {
